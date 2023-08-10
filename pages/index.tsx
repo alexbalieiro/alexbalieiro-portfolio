@@ -1,20 +1,28 @@
-import MySelfie from "../components/my-selfie";
+import AboutMe from "../components/about-me";
+import Home from "../components/home";
+import MyProjetcs from "../components/my-projetcs";
 import NavigationSwitcher from "../components/navigation-switcher";
-import SocialMedia from "../components/social-media";
-import styles from "../styles/Home.module.css";
+import Skills from "../components/skills";
+import styles from "../styles/HomePage.module.css";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <main className={styles.main}>
-      <MySelfie />
-      <h1 className={styles.title}>Alex Balieiro</h1>
-      <h2 className={styles.subtitle}>Developer Frontend</h2>
-      <div style={{ marginTop: "20px" }}>
-        <SocialMedia />
-      </div>
-      <div style={{ marginTop: "20px" }}>
-        <NavigationSwitcher />
-      </div>
-    </main>
+    <>
+      <main id="home" className={styles.main}>
+        <Home />
+        <nav className={styles.navbar}>
+          <NavigationSwitcher />
+        </nav>
+      </main>
+      <section id="aboutme">
+        <AboutMe />
+      </section>
+      <section id="skills">
+        <Skills />
+      </section>
+      <section id="myprojetcs">
+        <MyProjetcs />
+      </section>
+    </>
   );
 }

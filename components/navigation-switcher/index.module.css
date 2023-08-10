@@ -3,19 +3,42 @@
   padding: 4px;
   border: 1px solid #333;
   border-radius: 9999px;
+  width: 100%;
+  max-width: 342px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 721px) {
+  .container {
+    max-width: 400px;
+  }
 }
 .button {
   border: 0px;
   color: #888;
-  padding: 0 20px;
+  padding: 0 12px;
   height: 36px;
   font-size: 14px;
   cursor: pointer;
   border-radius: inherit;
   background: transparent;
+  display: flex;
+  align-items: center;
+  transition: all 0.5s ease;
+  text-align: center;
 }
-.button:hover {
+@media (min-width: 721px) {
+  .button {
+    padding: 0 18px;
+  }
+}
+.active {
   color: #fafafa;
   text-shadow: 1px 1px 12px hsl(0deg 0% 100% / 40%);
   background: hsla(0, 0%, 100%, 0.08);
+}
+.button:hover {
+  color: #fafafa;
 }

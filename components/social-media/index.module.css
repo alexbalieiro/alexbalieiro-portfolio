@@ -2,8 +2,31 @@
   display: flex;
   gap: 40px;
 }
-.elementContainer {
+.link {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.elementContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+}
+.elementContainer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  background-image: linear-gradient(90deg, #ff4d4d, #f9cb28);
+  transition: all 0.4s;
+  z-index: -1;
+}
+.elementContainer:hover {
+  background-color: #111;
+  box-shadow: 0 0 5px #ff4d4d, 0 0 20px #ff4d4d, 0 0px 20px #ff4d4d;
 }

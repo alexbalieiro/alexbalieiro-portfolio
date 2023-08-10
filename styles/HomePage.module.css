@@ -1,0 +1,13 @@
+.main {
+  padding-top: 50px;
+  height: 100vh;
+  max-height: 800px;
+}
+.navbar {
+  margin-top: 70px;
+}
+@media (min-width: 721px) {
+  .navbar {
+    margin-top: 25px;
+  }
+}
