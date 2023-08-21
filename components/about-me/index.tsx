@@ -1,23 +1,21 @@
 import styles from "./index.module.css";
+import useContentful from "../../data/useContentful";
+import { useEffect, useState } from "react";
 
 export default function AboutMe() {
+  const { getPortfolio } = useContentful();
+  const [data, setData] = useState();
+  useEffect(() => {
+    getPortfolio().then((res: any) => {
+      const data = res[0].aboutme.content[0].content[0].value;
+      setData(data);
+    });
+  }, []);
+
   return (
     <div className={styles.container}>
       <h1>About Me</h1>
-      <h2>Contenido</h2>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae tempore,
-        non maxime molestias veniam blanditiis assumenda quos. Dignissimos
-        atque, vitae animi eligendi commodi libero, culpa quaerat enim velit qui
-        aperiam?
-      </p>
-      <h2>Mas contenido</h2>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae tempore,
-        non maxime molestias veniam blanditiis assumenda quos. Dignissimos
-        atque, vitae animi eligendi commodi libero, culpa quaerat enim velit qui
-        aperiam?
-      </p>
+      <p>{data}</p>
     </div>
   );
 }

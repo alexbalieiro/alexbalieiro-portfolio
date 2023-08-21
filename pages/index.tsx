@@ -10,19 +10,19 @@ export default function HomePage() {
     <>
       <main id="home" className={styles.main}>
         <Home />
-        <nav className={styles.navbar}>
+        {/* <nav className={styles.navbar}>
           <NavigationSwitcher />
-        </nav>
+        </nav> */}
       </main>
       <section id="aboutme">
         <AboutMe />
       </section>
-      <section id="skills">
+      {/* <section id="skills">
         <Skills />
       </section>
       <section id="myprojetcs">
         <MyProjetcs />
-      </section>
+      </section> */}
     </>
   );
 }

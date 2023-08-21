@@ -6,6 +6,11 @@
   max-width: 300px;
   margin: auto;
 }
+@media (min-width: 721px) {
+  .container {
+    max-width: none;
+  }
+}
 .title {
   margin: 0;
   line-height: 1.15;
