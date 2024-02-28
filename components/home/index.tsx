@@ -8,7 +8,7 @@ export default function Home() {
       <MySelfie />
       <div>
         <h1 className={styles.title}>Alex Balieiro</h1>
-        <h2 className={styles.subtitle}>Developer Frontend</h2>
+        <h2 className={styles.subtitle}>Frontend Developer</h2>
       </div>
       <div style={{ marginTop: "20px" }}>
         <SocialMedia />
